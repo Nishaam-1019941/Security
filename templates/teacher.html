@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Teacher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='toevoegen.css') }}">
+</head>
+<body>
+    <h2>Add Teacher</h2>
+    <form method="post" action="{{ url_for('teachers') }}">
+        <label for="display_name">Display Name:</label>
+        <input type="text" id="display_name" name="display_name" required><br>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="teacher_password">Password:</label>
+        <input type="password" id="teacher_password" name="teacher_password" required><br>
+
+        <label for="is_admin">Admin:</label>
+        <input type="checkbox" id="is_admin" name="is_admin"><br>
+
+        <button type="submit">Add Teacher</button>
+
+    </form>
+</body>
+</html>

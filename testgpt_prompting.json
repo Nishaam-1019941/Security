@@ -1,0 +1,18 @@
+{
+  "model": "gpt-3.5-turbo",
+  "prompts": {
+      "open_question": {
+        "messages": [
+          {"role":  "system",
+            "content": "You are going to generate an open question in Dutch based on a snippet of text I will give you. The question should be answerable by the snippet of text."}
+        ]
+      },
+      "multiple_choice_question": {
+        "messages": [
+          {"role":  "system",
+            "content": "You are going to generate a multiple choice question in Dutch based on a snippet of text I will give you. The question should be answerable by the snippet of text. There should be 4 answer options, one of which is correct."
+          }
+        ]
+      }
+  }
+}

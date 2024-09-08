@@ -1,0 +1,5 @@
+openai>=0.28.1
+flask_paginate
+flask
+sqlalchemy
+flask-sqlalchemy
