@@ -622,8 +622,8 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "79bf2d87-f8dc-4282-a77f-1b69097b0218",
             "zIndex": 11,
+            "id": "79bf2d87-f8dc-4282-a77f-1b69097b0218",
             "data": {
               "type": "tm.Store",
               "name": "sqlite db",
