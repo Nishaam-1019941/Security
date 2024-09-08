@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Question</title>
+</head>
+<body>
+    <h2>Edit Question</h2>
+    <a href="{{ url_for('show_questions', note_id=question.note_id) }}">Back to Show Questions</a>
+
+    <form method="POST" action="{{ url_for('edit_question', question_id=question.questions_id) }}">
+        <label for="new_exam_question">New Exam Question:</label>
+        <input type="text" id="new_exam_question" name="new_exam_question" value="{{ question.exam_question }}">
+
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+</html>

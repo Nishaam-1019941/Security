@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Questions</title>
+</head>
+<body>
+    <h2>Questions</h2>
+    <a href="{{ url_for('overzicht') }}">Back to Overzicht</a>
+    <form method="POST" action="{{ url_for('generate_questions', note_id=note.note_id) }}">
+        <button type="submit">Generate New Questions</button>
+    </form>
+
+
+    <table border="1">
+        <tr>
+            <th>Question ID</th>
+            <th>Note ID</th>
+            <th>Question</th>
+            <th>Actions</th>
+        </tr>
+        
+        {% for question in questions %}
+            <tr>
+                <td>{{ question.questions_id }}</td>
+                <td>{{ question.note_id }}</td>
+                <td>{{ question.exam_question }}</td>
+                <td>
+                    <form method="GET" action="{{ url_for('edit_question', question_id=question.questions_id) }}">
+                        <button type="submit">Edit</button>
+                    </form>
+                    <form method="GET" action="{{ url_for('delete_question', question_id=question.questions_id) }}">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
